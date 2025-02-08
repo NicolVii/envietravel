@@ -3,48 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicol Travels - Your Personal Travel Advisor</title>
+    <title>EnviTravel - Luxury Adventures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background-color: #004080; color: white; text-align: center; padding: 20px; }
-        nav { background-color: #f8f8f8; padding: 10px; text-align: center; }
-        nav a { margin: 10px; text-decoration: none; color: #004080; font-weight: bold; }
-        section { padding: 20px; max-width: 800px; margin: auto; }
-        .btn { display: inline-block; padding: 10px 20px; background-color: #004080; color: white; text-decoration: none; border-radius: 5px; }
-        footer { background-color: #004080; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-image: url('https://source.unsplash.com/1600x900/?luxury,beach');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 10px 0 20px;
+        }
+        header .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .about, .services, .contact {
+            text-align: center;
+        }
+        .services .service {
+            display: inline-block;
+            width: 250px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .services .service:hover {
+            transform: translateY(-10px);
+        }
+        .services .service img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Nicol Travels</h1>
-        <p>Your Personal Travel Advisor</p>
+        <h1>EnviTravel</h1>
+        <p>Luxury Adventures to Exotic Destinations</p>
+        <a href="#services" class="btn">Explore Experiences</a>
     </header>
     <nav>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
-    <section id="about">
-        <h2>About Nicol Travels</h2>
-        <p>Welcome! I am an independent travel advisor affiliated with Avoya Travel, helping you find the best vacation experiences worldwide.</p>
+    <section id="about" class="about">
+        <h2>About EnviTravel</h2>
+        <p>At EnviTravel, we specialize in crafting bespoke luxury journeys for discerning travelers. From exclusive resorts to exotic destinations, we curate experiences that exceed expectations.</p>
     </section>
-    <section id="services">
+    <section id="services" class="services">
         <h2>Our Services</h2>
-        <ul>
-            <li>Exclusive Hotel Bookings</li>
-            <li>Custom Vacation Packages</li>
-            <li>Cruise & Tour Planning</li>
-            <li>Luxury & Budget Travel Options</li>
-        </ul>
+        <div class="service">
+            <img src="https://source.unsplash.com/250x150/?luxury,hotel" alt="Luxury Hotels">
+            <h3>Luxury Hotels</h3>
+            <p>Exclusive stays in 5-star and above properties worldwide.</p>
+        </div>
+        <div class="service">
+            <img src="https://source.unsplash.com/250x150/?cruise,ship" alt="Luxury Cruises">
+            <h3>Luxury Cruises</h3>
+            <p>Set sail on premium cruise lines for an unforgettable journey.</p>
+        </div>
+        <div class="service">
+            <img src="https://source.unsplash.com/250x150/?adventure,travel" alt="Tailored Itineraries">
+            <h3>Tailored Itineraries</h3>
+            <p>Personalized travel plans designed just for you.</p>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <strong>info@nicoltravels.com</strong></p>
-        <p>WhatsApp: +123456789</p>
-        <p><a href="#" class="btn">Request a Trip Quote</a></p>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have a question or ready to plan your dream vacation?</p>
+        <form>
+            <input type="text" placeholder="Your Name" style="padding: 10px; width: 200px; margin: 10px;"><br>
+            <input type="email" placeholder="Your Email" style="padding: 10px; width: 200px; margin: 10px;"><br>
+            <textarea placeholder="Your Message" style="padding: 10px; width: 300px; height: 100px; margin: 10px;"></textarea><br>
+            <button type="submit" style="padding: 10px 20px; background-color: #FFD700; border: none; color: #333; border-radius: 5px;">Send</button>
+        </form>
     </section>
     <footer>
-        <p>&copy; 2025 Nicol Travels. All rights reserved.</p>
+        <p>&copy; 2025 EnviTravel. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
