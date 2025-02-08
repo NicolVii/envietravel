@@ -1,0 +1,110 @@
+
+# Git Aliases and Commands Cheat Sheet
+
+## Aliases
+- `git st` → **Status**
+  - Full Command: `git status`
+  - Shows the current state of the repository (staged, unstaged, untracked files).
+
+- `git co` → **Checkout**
+  - Full Command: `git checkout`
+  - Switches between branches or restores files.
+
+- `git br` → **Branch**
+  - Full Command: `git branch`
+  - Lists all branches.
+
+- `git cm "message"` → **Commit**
+  - Full Command: `git commit -m "message"`
+  - Saves staged changes with a message.
+
+- `git last` → **Last Commit**
+  - Full Command: `git log -1 --stat`
+  - Shows details of the most recent commit.
+
+- `git lg` → **Log Graph**
+  - Full Command: `git log --oneline --graph --decorate --all`
+  - Displays a **visual graph** of commit history.
+
+- `git unstage <file>` → **Unstage File**
+  - Full Command: `git reset HEAD -- <file>`
+  - Removes a file from staging without losing changes.
+
+- `git amend` → **Amend Commit**
+  - Full Command: `git commit --amend --no-edit`
+  - Modifies the last commit **without changing its message**.
+
+---
+
+## Useful Git Commands
+- `git init` → **Initialize Repository**
+  - Initializes a new Git repository in your project directory.
+
+- `git add .` → **Stage All Changes**
+  - Adds all modified, deleted, or new files to the staging area.
+
+- `git commit -m "message"` → **Commit Changes**
+  - Saves staged changes with a descriptive message.
+
+- `git push` → **Push Changes**
+  - Uploads your committed changes to a remote repository (e.g., GitHub).
+
+- `git pull` → **Pull Changes**
+  - Fetches updates from a remote repository and merges them into your local branch.
+
+- `git clone <repository-url>` → **Clone Repository**
+  - Copies a remote Git repository to your local machine.
+
+- `git log` → **View Commit History**
+  - Displays the history of commits for the repository.
+
+- `git diff` → **Show Changes**
+  - Shows the exact changes in unstaged or staged files.
+
+- `git reset <file>` → **Unstage File**
+  - Removes a file from the staging area while keeping the changes.
+
+- `git restore <file>` → **Discard Changes**
+  - Discards changes in a file, restoring it to the last committed state.
+
+- `git fetch` → **Fetch Updates**
+  - Fetches changes from a remote repository without merging them.
+
+- `git merge <branch>` → **Merge Branch**
+  - Combines changes from another branch into your current branch.
+
+- `git status` → **Check Status**
+  - Displays the status of files in your working directory and staging area.
+
+---
+
+## Undoing/Removing an Alias
+- To remove a specific alias, use:
+  ```sh
+  git config --global --unset alias.<alias_name>
+  ```
+
+  **Example:**
+  To remove the alias `st`:
+  ```sh
+  git config --global --unset alias.st
+  ```
+
+- To remove **all aliases**, edit the global Git configuration file:
+  1. Open the config file:
+     ```sh
+     git config --global --edit
+     ```
+  2. Locate the `[alias]` section and delete the aliases you want to remove.
+
+---
+
+## Tips
+1. **Always use clear commit messages** to explain what changes were made.
+2. Use `git log --oneline` for a compact view of commit history.
+3. Combine `add` and `commit` with `git commit -am "message"` for quick commits.
+4. git config --global --list | Select-String alias to see the commands and by select string i see only alias
+
+---
+
+# Cheat Sheet Ends
