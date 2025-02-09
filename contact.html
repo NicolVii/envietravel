@@ -12,20 +12,21 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff;
-            background-color: #121212;
+            color: #333;
+            background-color: #f9f9f9;
             text-align: center;
         }
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(255, 255, 255, 0.9);
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px 20px;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav ul {
             list-style: none;
@@ -37,7 +38,7 @@
             margin-left: 20px;
         }
         nav ul li a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             font-weight: 600;
         }
@@ -51,19 +52,22 @@
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             font-weight: 700;
+            color: #333;
         }
         p {
             font-size: 1.2rem;
             font-weight: 300;
             max-width: 800px;
             margin: auto;
+            color: #555;
         }
         form {
             max-width: 600px;
             margin: auto;
             padding: 20px;
-            background-color: #1a1a1a;
+            background-color: #fff;
             border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         form input, form textarea {
             width: 100%;
@@ -71,20 +75,33 @@
             margin: 10px 0;
             border: none;
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         form input[type="submit"] {
-            background-color: #00bcd4;
-            color: #121212;
+            background-color: #D47A56;
+            color: #fff;
             font-weight: 600;
             cursor: pointer;
         }
         form input[type="submit"]:hover {
-            background-color: #0097a7;
+            background-color: #F9A76E;
         }
         footer {
             padding: 20px;
-            background-color: #121212;
+            background-color: #f9f9f9;
             font-size: 0.9rem;
+            color: #555;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #E3B778;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
