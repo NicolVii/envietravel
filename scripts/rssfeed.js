@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const rssUrl = "https://www.travelandleisure.com/rss";
+    const rssUrl = "https://www.luxurytravelmagazine.com/rss";
     const newsContainer = document.getElementById("news-articles");
 
     fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`)
