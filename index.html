@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/slideshow.css">
     <script src="scripts/navbar.js" defer></script>
     <script src="scripts/slideshow.js" defer></script>
+    <script src="scripts/rssfeed.js" defer></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -83,19 +84,6 @@
             max-width: 600px;
             margin: auto;
         }
-        .header-content .cta {
-            margin-top: 40px; /* Increased margin-top to move the button lower */
-            padding: 10px 20px;
-            background-color: #00bcd4;
-            color: #121212;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 5px;
-            margin-bottom: 60px; /* Increased margin-bottom to create more space between the logo and the button */
-        }
-        .header-content .cta:hover {
-            background-color: #0097a7;
-        }
         .logo-container {
             margin-top: 40px;
         }
@@ -145,6 +133,41 @@
             font-weight: 300;
             padding: 0 10px 20px;
         }
+        .news {
+            padding: 50px 20px;
+            background-color: #1a1a1a;
+        }
+        .news h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .news-articles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .news-articles .article {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .news-articles .article:hover {
+            transform: scale(1.05);
+        }
+        .news-articles .article h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .news-articles .article p {
+            font-size: 1rem;
+            font-weight: 300;
+            padding: 0 10px 20px;
+        }
         footer {
             padding: 20px;
             background-color: #121212;
@@ -178,7 +201,6 @@
             <div class="logo-container">
                 <img src="images/Envie Logo.png" alt="EnvieTravel Logo">
             </div>
-            <a href="about.html" class="cta">Learn More</a>
         </div>
     </header>
     <section class="services">
@@ -200,6 +222,14 @@
                     <h3>Expert Travel Advice</h3>
                     <p>Work with a travel expert to plan the perfect getaway.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="news">
+        <div class="container">
+            <h2>Latest Travel News</h2>
+            <div class="news-articles" id="news-articles">
+                <!-- News articles will be injected here by JavaScript -->
             </div>
         </div>
     </section>
