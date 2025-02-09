@@ -20,9 +20,15 @@
             text-align: center;
         }
         nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
         }
         nav ul {
             list-style: none;
@@ -50,7 +56,6 @@
             padding: 20px;
             background: url('https://source.unsplash.com/1600x900/?mystery,travel') center/cover no-repeat;
             position: relative;
-            animation: fadeIn 2s ease-in-out;
         }
         header::after {
             content: "";
@@ -64,69 +69,116 @@
         .header-content {
             position: relative;
             z-index: 2;
-            animation: fadeIn 3s ease-in-out;
             text-align: center;
         }
-        .logo {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
-        }
-        h1 {
+        .header-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             font-weight: 700;
+            margin-bottom: 20px;
         }
-        p {
+        .header-content p {
             font-size: 1.2rem;
             font-weight: 300;
             max-width: 600px;
             margin: auto;
         }
-        .contact {
+        .header-content .cta {
+            margin-top: 100px; /* Increased margin-top to move the button lower */
+            padding: 10px 20px;
+            background-color: #00bcd4;
+            color: #121212;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            margin-bottom: 60px; /* Increased margin-bottom to create more space between the logo and the button */
+        }
+        .header-content .cta:hover {
+            background-color: #0097a7;
+        }
+        .logo-container {
+            margin-top: 40px;
+        }
+        .logo-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+        }
+        .services {
             padding: 50px 20px;
             background-color: #1a1a1a;
         }
-        .contact h2 {
+        .services h2 {
             font-size: 2rem;
             font-weight: 600;
+            margin-bottom: 20px;
         }
-        .contact-info {
-            font-size: 1.1rem;
-            margin-top: 20px;
+        .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
-        .contact-info a {
-            color: #00bcd4;
-            text-decoration: none;
+        .service-cards .card {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .service-cards .card:hover {
+            transform: scale(1.05);
+        }
+        .service-cards .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service-cards .card h3 {
+            font-size: 1.5rem;
             font-weight: 600;
+            margin: 10px 0;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+        .service-cards .card p {
+            font-size: 1rem;
+            font-weight: 300;
+            padding: 0 10px 20px;
         }
         footer {
             padding: 20px;
             background-color: #121212;
             font-size: 0.9rem;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
         <div class="header-content">
-            <img src="images/Envie Logo.png" alt="EnvieTravel Logo" class="logo">
             <h1>EnvieTravel</h1>
             <p>Envie is more than a desire—it is the spark that ignites adventure, the longing that moves us beyond the ordinary. It is the pull of distant shores, the taste of discovery, the feeling that something extraordinary awaits.<br>Trust me with your envie, and I will unfold the world before you.</p>
+            <div class="logo-container">
+                <img src="images/Envie Logo.png" alt="EnvieTravel Logo">
+            </div>
+            <a href="about.html" class="cta">Learn More</a>
         </div>
     </header>
     <section class="services">
@@ -134,17 +186,17 @@
             <h2>Our Services</h2>
             <div class="service-cards">
                 <div class="card">
-                    <img src="images/services/personalized-itineraries.jpg" alt="Personalized Itineraries">
+                    <img src="images/itineary.jpg" alt="Personalized Itineraries">
                     <h3>Personalized Itineraries</h3>
                     <p>Custom-tailored journeys designed to match your unique tastes.</p>
                 </div>
                 <div class="card">
-                    <img src="images/services/luxury-cruises.jpg" alt="Luxury Cruises">
+                    <img src="images/cruise2.jpg" alt="Luxury Cruises">
                     <h3>Luxury Cruises</h3>
                     <p>Experience the world’s finest destinations from the sea.</p>
                 </div>
                 <div class="card">
-                    <img src="images/services/travel-advice.jpg" alt="Travel Advice">
+                    <img src="images/friends.jpg" alt="Travel Advice">
                     <h3>Expert Travel Advice</h3>
                     <p>Work with a travel expert to plan the perfect getaway.</p>
                 </div>
