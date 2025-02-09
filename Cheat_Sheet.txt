@@ -104,9 +104,6 @@
 2. Use `git log --oneline` for a compact view of commit history.
 3. Combine `add` and `commit` with `git commit -am "message"` for quick commits.
 4. git config --global --list | Select-String alias to see the commands and by select string i see only alias
-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
-
 
 ---
-
 # Cheat Sheet Ends
