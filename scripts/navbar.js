@@ -1,7 +1,9 @@
 // Navbar Script (navbar.js)
-const navbarToggle = document.getElementById('navbarToggle');
-const navLinks = document.getElementById('navLinks');
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggle = document.getElementById('navbarToggle');
+    const navLinks = document.getElementById('navLinks');
 
-navbarToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navbarToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
 });
