@@ -4,42 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Envie Travel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/navbar.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #121212;
+            text-align: center;
+        }
+        nav {
+            padding: 20px;
+            background-color: #1a1a1a;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 50px 20px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            padding: 20px;
+            background-color: #121212;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Envie Travel</a>
-            <button class="navbar-toggle" id="navbarToggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2>About Envie Travel</h2>
-            <p>When you are drawn to the world, to its people, and its stories, travel becomes more than a journey—it becomes medicine for the soul. I founded Envie Travel to help explorers like you connect with the world in a meaningful way, through curated itineraries and bespoke experiences. Whether it’s sailing the Aegean or discovering hidden gems, let me guide you to adventures that inspire and transform.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <div class="content">
+        <h1>About EnvieTravel</h1>
+        <p>EnvieTravel is dedicated to providing luxury travel experiences that go beyond the ordinary. Our mission is to ignite your sense of adventure and help you discover the extraordinary. With personalized itineraries and exclusive access to the world's most captivating destinations, we ensure that every journey is unforgettable.</p>
+    </div>
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Envie Travel. All Rights Reserved.</p>
-            <p>Email: <a href="mailto:your@email.com">your@email.com</a> | Instagram: <a href="https://instagram.com/Envie.luxurytravel" target="_blank">@Envie.luxurytravel</a></p>
-        </div>
+        <p>&copy; 2025 EnvieTravel. All rights reserved.</p>
+        <p>Email: <a href="mailto:nicol@envietravel.com">nicol@envietravel.com</a> | Instagram: <a href="https://instagram.com/envie.luxurytravel" target="_blank">@envie.luxurytravel</a> | Phone: +30 6955 392393</p>
     </footer>
 </body>
 </html>
