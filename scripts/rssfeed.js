@@ -16,11 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     let description = item.description.replace(/<[^>]*>/g, ''); // Remove HTML tags
                     description = description.split(' ').slice(0, 20).join(' ') + '...'; // Limit to 20 words
 
-                    // Use a placeholder image if the image link is broken
-                    const imageUrl = item.enclosure && item.enclosure.link ? item.enclosure.link : 'images/placeholder.jpg';
-
                     article.innerHTML = `
-                        <img src="${imageUrl}" alt="${item.title}">
                         <h3>${item.title}</h3>
                         <p>${description}</p>
                         <a href="${item.link}" target="_blank">Read more</a>
